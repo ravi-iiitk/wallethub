@@ -80,7 +80,7 @@ public class LoginPage {
 
     public void doLogin(String userId,String password)
     {
-            log.info("verifyUserOnLoginScreen function called");
+            log.info("doLogin function called");
             if(userid_editField!=null && passwd_editField !=null)
             {
                 boolean editFiledDataEntered = SeleniumCommonLib.enterDataInFieldWeb(userid_editField,userId,"User id field",screenName,15);

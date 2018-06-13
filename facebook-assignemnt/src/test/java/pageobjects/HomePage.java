@@ -50,7 +50,7 @@ public class HomePage {
     
     public void createNewPost(String postText) throws InterruptedException
     {
-            log.info("String postText function called");
+            log.info("createNewPost function called");
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
             if(post_editField!=null)
             {
@@ -93,15 +93,17 @@ public class HomePage {
                 message="Elements could not be located"+" on screen: -"+screenName;
                 log.error(message);
             }
-
+            log.info("createNewPost function called ended");
     }
     
     public void verfiyNewlyCreatedPost(String postText)
     {
+    	log.info("createNewPost function called");
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	log.info("Function verfiyNewlyCreatedPost called");
     	WebElement post = driver.findElement(By.xpath("//div[contains(@class,'userContentWrapper')]//div[contains(@class,'userContent')]//p[contains(text(),'"+postText.trim()+"')]"));
     	SeleniumCommonLib.verifyWebElmentExistHard(post);
+    	 log.info("createNewPost function called ended");
     }
     
     
