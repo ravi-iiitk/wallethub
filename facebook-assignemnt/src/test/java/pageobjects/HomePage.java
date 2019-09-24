@@ -38,7 +38,7 @@ public class HomePage {
 
     @FindBy(how = How.NAME, using = "xhpc_message")
     public WebElement post_editField;
-    
+
     @FindBy(how = How.XPATH, using = "//div[@contenteditable='true']")
     public WebElement postnew_editField;
     

@@ -1,11 +1,20 @@
 Feature: Facebook User Post 
 
+
+Scenario: To test positive login flow.
+Given I am on facebook login page
+When I enter the user id
+And I enter the password
+And I hit login
+Then I must be able to login.
+
+@smoke
 Scenario: To Verify Facebook post is working
 Given I have opened facebook page
 When I am on facebook login page
 And I enter credentials
 |user_id			 |password	 |
-|ravi.iiitk@gmail.com|F@ceb00kPwd|
+|<user_id>|<password>|
 And Click on Login Button 
 Then I must be able to login 
 And I must see my facebook home page
