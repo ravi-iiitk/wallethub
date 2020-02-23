@@ -73,6 +73,7 @@ public class HomePage {
                        message="Button could be clicked - on screen-:"+screenName;
                        log.info(message);
                        Utility.takeScreenshot(driver,"createPost");
+                       log.info("This is the message");
                    }
                    else
                    {
